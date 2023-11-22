@@ -42,36 +42,38 @@ class MainScene extends Phaser.Scene {
     }
     // 毎フレーム実行される繰り返し処理
     update() {
-        // プレイヤーの向きフラグを変更
-        if (this.player.x >= D_WIDTH - 100) this.player_direction = -1;
-        if (this.player.x <= 100) this.player_direction = 1;
-        // プレイヤーの移動
-        if (this.player_direction == 1) {
-            this.player.x += 8;// 横方向へ移動を設定
-        } else {
-            this.player.x -= 8;// 横方向へ移動を設定
-        }
+          // プレイヤーの向きフラグを変更
+          if (this.player.y >= D_HIGHT - 100) this.player_direction = -1;
+          if (this.player.y <= 100) this.player_direction = 1;
+          // プレイヤーの移動
+          if (this.player_direction == 1) {
+              this.player.y += 3;// 縦方向へ移動を設定
+          } else {
+              this.player.y -= 3;// 縦方向へ移動を設定
+          }
+  
 
         //プレイヤーの向きフラグを変更
-        if(this.player2.y >= D_HEIGHT - 100) this.player2_direction = -1;
-        if(this.player2.y <= 50) this.player2_direction = 1;
+        if(this.player2.x >= D_WIDTH - 100) this.player2_direction = -1;
+        if(this.player2.x <= 50) this.player2_direction = 1;
         //プレイヤーの移動
         if(this.player2_direction == 1){
-            this.player2.y += 3;//縦方向へ移動を設定
+            this.player2.x += 20;//横方向へ移動を設定
         } else {
-            this.player2.y -= 3;//縦方向へ移動を設定
+            this.player2.x -= 20;//横方向へ移動を設定
         }
 
+      
         //プレイヤーの向きフラグを変更
         if(this.player3.x >= D_WIDTH - 100) this.player3_direction = -1;
         if(this.player3.x <= 100) this.player3_direction = 1;
         //プレイヤーの移動
         if(this.player3_direction == 1){
-            this.player3.x += 3;//縦方向へ移動を設定
-            this.player3.y += 3;
+            this.player3.x += 7;//縦方向へ移動を設定
+            this.player3.y += 7;
         } else {
-            this.player3.x -= 3;//縦方向へ移動を設定
-            this.player3.y -= 3;
+            this.player3.x -= 7;//縦方向へ移動を設定
+            this.player3.y -= 7;
         }
 
     }
